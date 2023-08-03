@@ -832,7 +832,7 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language \"" . $wgLanguageCode
 			return $value;
 		} else {
 			// Remove extra spaces.
-			return array_map( 'trim', explode( $delimiter, $value ) );
+			return array_map( 'trim', explode( $delimiter, $value ?? "" ) );
 		}
 	}
 

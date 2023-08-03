@@ -704,7 +704,7 @@ class PFFormField {
 	 * @return string|string[]
 	 */
 	public function valueStringToLabels( $valueString, $delimiter ) {
-		if ( strlen( trim( $valueString ) ) === 0 ||
+		if ( strlen( trim( $valueString ?? "" ) ) === 0 ||
 			$this->mPossibleValues === null ) {
 			return $valueString;
 		}
