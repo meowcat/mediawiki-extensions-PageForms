@@ -23,7 +23,7 @@ class PFRunQuery extends IncludableSpecialPage {
 		$this->getOutput()->enableOOUI();
 
 		$form_name = $this->including() ? $query : $this->getRequest()->getVal( 'form', $query );
-		$form_name = str_replace( '_', ' ', $form_name );
+		$form_name = str_replace( '_', ' ', $form_name ?? "" );
 
 		$this->printPage( $form_name, $this->including() );
 	}
